@@ -1,0 +1,105 @@
+@font-face{
+    font-family: htcNLz;
+    src: url(./htcNLz.ttf);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#main{
+    background-image: linear-gradient(to left , black , rgb(75, 74, 74) , black);
+    font-size: 5rem;
+    height: 33vh;
+    width: 50%;
+    margin: auto;
+    margin-top: -20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#time {
+    text-align: center;
+    font-family: htcNLz;
+    color: chartreuse;
+    font-size: 1.5em;
+}
+h2 {
+    color: green;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 0.5em;
+    background-image: linear-gradient(to left , rgb(150, 226, 74) , rgb(184, 226, 142) , rgb(150, 226, 74) );
+    /* background-color: rgb(184, 226, 142); */
+    width: 90%;
+    margin: auto;
+    margin-top: -65px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.main-heading{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 4px 2px 2px rgb(250, 120, 120);
+}
+.start{
+    background-color: #157347;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+}
+.stop{
+    background-color: #BB2D3B;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+}
+.start:focus{
+    background-color: green;
+    padding: 10px;
+}
+.stop:focus{
+    background-color: red;
+    padding: 10px;
+}
+.btn{
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:280px) and (max-width:440px) {
+    #main{
+        width: 90%;
+        height: 20vh;
+    }
+    #time{
+        font-size: 4rem;
+        margin-top: 10px;
+        position: relative;
+        top: 10px;
+    }
+    h2{
+        font-size: 1.4rem;
+        position: relative;
+        top: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 85%;
+        padding: 5px;
+        
+    }
+    .main-heading{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    #main{
+        width: 90%;
+    }
+}
