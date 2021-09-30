@@ -8,11 +8,6 @@ function gettime(){
     var month = document.getElementById("month")
     var year = document.getElementById("year")
     var day = document.getElementById("dayy")
-    var aaa = document.getElementById("ampm")
-
-    // var aaaa = hour < 12 ? "Am" : "Pm";
-    // aaa.innerHTML = aaaa
-
 
     
     // day / week 
@@ -43,9 +38,6 @@ function gettime(){
     var hourr = new Date().getHours() -12
     if(hourr < 10){
         hour.innerHTML = "0" + hourr
-    }
-    else{
-        hour.innerHTML = hourr
     }
 
     // minutes
