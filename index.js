@@ -8,9 +8,14 @@ function gettime(){
     var month = document.getElementById("month")
     var year = document.getElementById("year")
     var day = document.getElementById("dayy")
+    var aaa = document.getElementById("ampm")
 
-    // day.innerHTML = new Date().getDay()
+    // var aaaa = hour < 12 ? "Am" : "Pm";
+    // aaa.innerHTML = aaaa
 
+
+    
+    // day / week 
     var week = new Date().getDay()
     if (week == 0){
         day.innerHTML = "Sunday"
@@ -34,46 +39,31 @@ function gettime(){
         day.innerHTML = "Saturday"
     }
 
-    // var hourss = new Date().getHours()
-    // if(hourss == 13){
-    //     hour.innerHTML = "01"
-    // }
-    // else if(hourss == 14){
-    //     hour.innerHTML = "02"
-    // }
-    // else if(hourss == 15){
-    //     hour.innerHTML = "03"
-    // }
-    // else if(hourss == 16){
-    //     hour.innerHTML = "04"
-    // }
-    // else if(hourss == 17){
-    //     hour.innerHTML = "05"
-    // }
-    // else if(hourss == 18){
-    //     hour.innerHTML = "06"
-    // }
-    // else if(hourss == 19){
-    //     hour.innerHTML = "07"
-    // }
-    // else if(hourss == 20){
-    //     hour.innerHTML = "08"
-    // }
-    // else if(hourss == 21){
-    //     hour.innerHTML = "09"
-    // }
-    // else if(hourss == 22){
-    //     hour.innerHTML = "10"
-    // }
-    // else if(hourss == 23){
-    //     hour.innerHTML = "11"
-    // }
-    // else if(hourss == 24){
-    //     hour.innerHTML = "12"
-    // }
-    hour.innerHTML = new Date().getHours()
-    min.innerHTML = new Date().getMinutes()
-    sec.innerHTML = new Date().getSeconds()
+    // hour.innerHTML = new Date().getHours() -12
+    var hourr = new Date().getHours() -12
+    if(hourr < 10){
+        hour.innerHTML = "0" + hourr
+    }
+    else{
+        hour.innerHTML = hourr
+    }
+
+    // minutes
+    var minnn = new Date().getMinutes()
+    if(minnn < 10){
+        min.innerHTML = "0" + minnn
+    }
+    else{
+        min.innerHTML = minnn
+    }
+    // seconds
+    var seccc = new Date().getSeconds()
+    if(seccc < 10){
+        sec.innerHTML = "0" + seccc
+    }
+    else{
+        sec.innerHTML = seccc
+    }
 
     date.innerHTML = new Date().getUTCDate()
 
