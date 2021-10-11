@@ -35,9 +35,15 @@ function gettime(){
     }
 
     // hour.innerHTML = new Date().getHours() -12
-    var hourr = new Date().getHours() -12
-    if(hourr < 10){
+    var hourr = new Date().getHours()
+    if(hourr >= 12){
+        hour.innerHTML = hourr -12
+    } 
+    else if(hourr < 10){
         hour.innerHTML = "0" + hourr
+    }
+    else{
+        hour.innerHTML = hourr
     }
 
     // minutes
@@ -106,9 +112,12 @@ function gettime(){
 var interval;
 
 function startBtn(){
+    if(!interval){
     interval = setInterval(gettime,1000)
+    }
 }
 function stopBtn(){
     clearInterval(interval)
+    interval = ""
 }
 startBtn()
